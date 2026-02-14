@@ -5,14 +5,12 @@ import { WhatsAppButton } from './components/Button';
 import { ADDRESSES } from './constants';
 
 const App: React.FC = () => {
-  // Foto oficial solicitada (ID: 1ilzh99eJK0Dq30cl0Rw-gnI88MCtR9UZ)
   const heroPhotoUrl = "https://drive.google.com/thumbnail?id=1ilzh99eJK0Dq30cl0Rw-gnI88MCtR9UZ&sz=w2000";
 
   return (
     <div className="min-h-screen flex flex-col bg-ice">
       {/* 1. HERO SECTION */}
       <section className="relative min-h-[90vh] flex items-center bg-navy text-white overflow-hidden border-b border-gold/20">
-        {/* Background Decorative */}
         <div className="absolute top-0 right-0 w-1/4 h-full bg-gold/5 -skew-x-12 translate-x-1/2 pointer-events-none"></div>
         
         <div className="container mx-auto px-6 py-12 md:py-20 relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -41,14 +39,14 @@ const App: React.FC = () => {
                   <span className="inline-flex items-center justify-center w-5 h-5 bg-gold/10 rounded-full mr-2 text-[10px]">✓</span>
                   Resposta rápida em horário comercial • Sigilo total garantido
                 </p>
-                <p className="text-ice/40 text-[10px] md:text-[11px] uppercase tracking-widest text-center md:text-left">
+                <p className="text-ice/40 text-[10px] md:text-[11px] uppercase tracking-widest text-center md:text-left font-medium">
                   Atendimento de Segunda a Sexta, das 9h às 18h
                 </p>
               </div>
             </div>
           </div>
           
-          <div className="flex justify-center md:justify-end relative order-1 md:order-2">
+          <div className="flex justify-center md:justify-end relative order-1 md:order-2 animate-fade-in" style={{animationDelay: '0.2s'}}>
             <div className="relative w-full max-w-[280px] md:max-w-[360px] aspect-[3/4] bg-navy rounded-sm overflow-hidden shadow-[0_25px_60px_rgba(0,0,0,0.6)] border border-gold/20 group">
               <img 
                 src={heroPhotoUrl} 
@@ -67,7 +65,7 @@ const App: React.FC = () => {
             </div>
             
             {/* Experience Badge */}
-            <div className="hidden lg:flex absolute -bottom-6 -left-10 bg-white p-6 shadow-2xl items-center space-x-4 border-l-4 border-gold animate-bounce-slow">
+            <div className="hidden lg:flex absolute -bottom-6 -left-10 bg-white p-6 shadow-2xl items-center space-x-4 border-l-4 border-gold">
               <div className="text-navy font-title text-5xl font-black">35</div>
               <div className="text-[10px] text-navy/60 leading-tight uppercase font-bold tracking-tighter">
                 Anos de<br/>Experiência<br/>Comprovada
@@ -107,7 +105,7 @@ const App: React.FC = () => {
                 <div>
                   <h3 className="font-title text-2xl font-bold text-navy mb-2">Segurança Jurídica</h3>
                   <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-                    Atuação pautada pelo respeito absoluto aos trâmites legais, garantindo que o seu direito seja inquestionável perante terceiros.
+                    Atuação pautada pelo respeito absoluto aos trâmites legais, garantindo que o seu direito seja inquestionável.
                   </p>
                 </div>
               </div>
@@ -169,12 +167,9 @@ const App: React.FC = () => {
 
       {/* 3. SERVICES SECTION */}
       <section id="servicos" className="py-24 bg-ice">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16 max-w-2xl mx-auto">
-            <h2 className="font-title text-4xl font-bold text-navy mb-4">Especialidades Banzer</h2>
-            <div className="h-1 w-20 bg-gold mx-auto mb-6"></div>
-            <p className="text-navy/60 text-sm">Soluções jurídicas personalizadas com foco em resultado e discrição.</p>
-          </div>
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="font-title text-4xl font-bold text-navy mb-4">Especialidades Banzer</h2>
+          <div className="h-1 w-20 bg-gold mx-auto mb-12"></div>
           
           <div className="grid md:grid-cols-3 gap-8">
             <ServiceCard 
@@ -222,7 +217,7 @@ const App: React.FC = () => {
             Não deixe para amanhã a segurança do que você levou uma vida para construir. Fale agora com nossa equipe de especialistas.
           </p>
           <div className="flex flex-col items-center space-y-6">
-            <WhatsAppButton className="!bg-navy hover:!bg-navy/90 !px-12 py-6 shadow-2xl hover:scale-105 transition-all" />
+            <WhatsAppButton className="!bg-navy hover:!bg-navy/90 !px-12 py-6 shadow-2xl transition-all" />
             
             <div className="space-y-2">
               <p className="text-navy/80 text-sm font-bold flex items-center justify-center">
@@ -271,8 +266,8 @@ const App: React.FC = () => {
               <h4 className="font-bold text-xs uppercase tracking-[0.3em] text-white/40">Nossas Unidades</h4>
               <div className="space-y-8">
                 {ADDRESSES.map((addr, idx) => (
-                  <div key={idx} className="space-y-1 group">
-                    <p className="text-gold font-bold text-xs uppercase tracking-wider group-hover:text-white transition-colors">{addr.city}</p>
+                  <div key={idx} className="space-y-1">
+                    <p className="text-gold font-bold text-xs uppercase tracking-wider">{addr.city}</p>
                     <p className="text-ice/60 text-sm">{addr.location}</p>
                     <p className="text-ice/30 text-[10px]">{addr.details}</p>
                   </div>
