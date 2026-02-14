@@ -1,6 +1,6 @@
 
 export const WHATSAPP_LINK = "https://api.whatsapp.com/message/FMXQYOUUZBD4E1?autoload=1&app_absent=0";
-export const CTA_TEXT = "falar com especialista 35";
+export const CTA_TEXT = "Falar com Especialista";
 
 export const ADDRESSES = [
   {
