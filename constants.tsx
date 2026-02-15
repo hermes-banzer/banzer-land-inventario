@@ -1,5 +1,5 @@
 
-export const WHATSAPP_LINK = "https://api.whatsapp.com/message/FMXQYOUUZBD4E1?autoload=1&app_absent=0";
+export const WHATSAPP_LINK = "https://wa.me/message/FMXQYOUUZBD4E1";
 export const CTA_TEXT = "Falar com Especialista";
 
 export const ADDRESSES = [

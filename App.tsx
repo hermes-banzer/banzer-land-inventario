@@ -10,12 +10,19 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-ice">
       {/* 1. HERO SECTION */}
-      <section className="relative min-h-[90vh] flex items-center bg-navy text-white overflow-hidden border-b border-gold/20">
+      <section className="relative min-h-[90vh] flex flex-col justify-center bg-navy text-white overflow-hidden border-b border-gold/20">
+        {/* Mobile-Only Experience Badge (Subtle and Elegant) */}
+        <div className="md:hidden w-full flex justify-center pt-6 pb-2 animate-fade-in">
+          <div className="px-4 py-1.5 border border-gold/40 rounded-full flex items-center space-x-2 bg-gold/5 backdrop-blur-sm">
+            <span className="text-[9px] uppercase tracking-[0.3em] font-bold text-gold">35 Anos de Excelência Jurídica</span>
+          </div>
+        </div>
+
         <div className="absolute top-0 right-0 w-1/4 h-full bg-gold/5 -skew-x-12 translate-x-1/2 pointer-events-none"></div>
         
-        <div className="container mx-auto px-6 py-12 md:py-20 relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="container mx-auto px-6 py-8 md:py-20 relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="space-y-6 animate-fade-in text-center md:text-left order-2 md:order-1">
-            <div className="inline-flex items-center space-x-2 bg-gold/20 border border-gold/30 px-4 py-2 rounded-full mb-2">
+            <div className="hidden md:inline-flex items-center space-x-2 bg-gold/20 border border-gold/30 px-4 py-2 rounded-full mb-2">
               <span className="w-2 h-2 bg-gold rounded-full animate-pulse"></span>
               <span className="text-gold font-bold text-[10px] md:text-xs tracking-widest uppercase">
                 Banzer Advocacia | Excelência Jurídica há 35 Anos
@@ -23,11 +30,11 @@ const App: React.FC = () => {
             </div>
             
             <h1 className="font-title text-4xl md:text-5xl lg:text-7xl font-black leading-[1.1]">
-              <span className="block mb-2">Regularização de</span>
+              <span className="block mb-1 md:mb-2">Regularização de</span>
               <span className="text-gold">Imóveis</span> e Inventários
             </h1>
             
-            <p className="text-lg md:text-xl text-ice/70 font-light leading-relaxed max-w-lg mx-auto md:mx-0">
+            <p className="text-base md:text-xl text-ice/70 font-light leading-relaxed max-w-lg mx-auto md:mx-0">
               Segurança jurídica e tranquilidade absoluta para o seu patrimônio. Atendimento premium focado em agilidade e resultados concretos.
             </p>
             
@@ -47,7 +54,7 @@ const App: React.FC = () => {
           </div>
           
           <div className="flex justify-center md:justify-end relative order-1 md:order-2 animate-fade-in" style={{animationDelay: '0.2s'}}>
-            <div className="relative w-full max-w-[280px] md:max-w-[360px] aspect-[3/4] bg-navy rounded-sm overflow-hidden shadow-[0_25px_60px_rgba(0,0,0,0.6)] border border-gold/20 group">
+            <div className="relative w-full max-w-[240px] md:max-w-[360px] aspect-[3/4] bg-navy rounded-sm overflow-hidden shadow-[0_25px_60px_rgba(0,0,0,0.6)] border border-gold/20 group">
               <img 
                 src={heroPhotoUrl} 
                 alt="Dr. Hermes Banzer" 
@@ -58,13 +65,13 @@ const App: React.FC = () => {
                 }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy/95 via-transparent to-transparent opacity-80"></div>
-              <div className="absolute bottom-6 left-6 right-6">
-                <p className="font-title text-xl text-gold font-bold">Banzer Advocacia</p>
-                <p className="text-ice/50 text-[10px] uppercase tracking-[0.2em] font-semibold">OAB/SP 109.692</p>
+              <div className="absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6 md:right-6">
+                <p className="font-title text-lg md:text-xl text-gold font-bold">Banzer Advocacia</p>
+                <p className="text-ice/50 text-[9px] md:text-[10px] uppercase tracking-[0.2em] font-semibold">OAB/SP 109.692</p>
               </div>
             </div>
             
-            {/* Experience Badge */}
+            {/* Experience Badge (Desktop Only) */}
             <div className="hidden lg:flex absolute -bottom-6 -left-10 bg-white p-6 shadow-2xl items-center space-x-4 border-l-4 border-gold">
               <div className="text-navy font-title text-5xl font-black">35</div>
               <div className="text-[10px] text-navy/60 leading-tight uppercase font-bold tracking-tighter">
@@ -76,9 +83,9 @@ const App: React.FC = () => {
       </section>
 
       {/* 2. DIFFERENTIALS */}
-      <section className="py-24 bg-white relative">
+      <section className="py-20 md:py-24 bg-white relative">
         <div className="container mx-auto px-6 max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-20 items-center">
+          <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
             
             <div className="space-y-12">
               <div className="group flex items-start space-x-5">
@@ -124,28 +131,28 @@ const App: React.FC = () => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-3 gap-8 pt-12 border-t border-gray-100">
+              <div className="grid grid-cols-3 gap-4 md:gap-8 pt-12 border-t border-gray-100">
                 <div className="text-center">
-                  <p className="font-title text-3xl md:text-4xl text-gold font-black">35+</p>
-                  <p className="text-[10px] md:text-xs text-gray-400 uppercase tracking-widest font-bold mt-2">Anos de Atuação</p>
+                  <p className="font-title text-2xl md:text-4xl text-gold font-black">35+</p>
+                  <p className="text-[9px] md:text-xs text-gray-400 uppercase tracking-widest font-bold mt-2">Anos de Atuação</p>
                 </div>
                 <div className="text-center">
-                  <p className="font-title text-3xl md:text-4xl text-gold font-black">2k+</p>
-                  <p className="text-[10px] md:text-xs text-gray-400 uppercase tracking-widest font-bold mt-2">Casos Resolvidos</p>
+                  <p className="font-title text-2xl md:text-4xl text-gold font-black">2k+</p>
+                  <p className="text-[9px] md:text-xs text-gray-400 uppercase tracking-widest font-bold mt-2">Casos Resolvidos</p>
                 </div>
                 <div className="text-center">
-                  <p className="font-title text-3xl md:text-4xl text-gold font-black">98%</p>
-                  <p className="text-[10px] md:text-xs text-gray-400 uppercase tracking-widest font-bold mt-2">Satisfação</p>
+                  <p className="font-title text-2xl md:text-4xl text-gold font-black">98%</p>
+                  <p className="text-[9px] md:text-xs text-gray-400 uppercase tracking-widest font-bold mt-2">Satisfação</p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-navy p-10 md:p-14 rounded-sm relative overflow-hidden group shadow-2xl">
+            <div className="bg-navy p-8 md:p-14 rounded-sm relative overflow-hidden group shadow-2xl">
               <div className="absolute top-0 right-0 w-32 h-32 bg-gold/10 -mr-16 -mt-16 rounded-full opacity-30"></div>
-              <h2 className="font-title text-3xl md:text-4xl text-white font-bold mb-8 italic leading-tight text-center md:text-left">
+              <h2 className="font-title text-2xl md:text-4xl text-white font-bold mb-8 italic leading-tight text-center md:text-left">
                 "A sua tranquilidade patrimonial é a nossa maior entrega estratégica."
               </h2>
-              <p className="text-ice/60 leading-relaxed mb-10 text-lg text-center md:text-left">
+              <p className="text-ice/60 leading-relaxed mb-10 text-base md:text-lg text-center md:text-left">
                 Transformamos processos complexos em soluções simples e seguras para sua família ou empresa.
               </p>
               <div className="space-y-5">
