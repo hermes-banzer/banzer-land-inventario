@@ -5,7 +5,7 @@ import { WhatsAppButton } from './components/Button';
 import { ADDRESSES } from './constants';
 
 const App: React.FC = () => {
-  const heroPhotoUrl = "https://lh3.googleusercontent.com/d/1ilzh99eJK0Dq30cl0Rw-gnI88MCtR9UZ";
+  const heroPhotoUrl = "https://lh3.googleusercontent.com/d/1wtTjjgroBHZ0EIAPvATS3lUdzg7PpsTI";
   const logoUrl = "https://lh3.googleusercontent.com/d/1WfHNTsAI8kh7cRMHncwCpx1FSYcpP_wO";
 
   return (
